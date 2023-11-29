@@ -8,7 +8,6 @@ import {
   Linking,
 } from 'react-native';
 import Geolocation from 'react-native-geolocation-service';
-import Geocoder from 'react-native-geocoding';
 
 // Function to get permission for location
 const requestLocationPermission = async () => {
@@ -73,15 +72,6 @@ const App = () => {
     }
   };
 
-  // const getAddress = () => {
-  //   Geocoder.init('AIzaSyD8sSrmOvP6y2NREPe_S1Gp8oOtHPzMKrw');
-  //   Geocoder.from(41.89, 12.49)
-	// 	.then(json => {
-  //     var addressComponent = json.results[0].address_components[0];
-	// 		console.log(addressComponent);
-	// 	})
-	// 	.catch(error => console.warn(error));
-  // }
   return (
     <View style={styles.container}>
       <Text>Welcome!</Text>
@@ -95,10 +85,6 @@ const App = () => {
         style={{marginTop: 10, padding: 10, borderRadius: 10, width: '40%'}}>
         <Button title="Send Location" onPress={sendLocation} />
       </View>
-      {/* <View
-        style={{marginTop: 10, padding: 10, borderRadius: 10, width: '40%'}}>
-        <Button title="Get Address" onPress={getAddress} />
-      </View> */}
     </View>
   );
 };
